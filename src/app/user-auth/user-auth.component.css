@@ -1,0 +1,10 @@
+.user-auth{
+    margin-top: 50px;
+    margin-bottom: 80px;
+    color: rgb(10, 167, 167);
+    text-align: center;
+}
+.common-form a{
+color: aqua;
+cursor: pointer;
+}

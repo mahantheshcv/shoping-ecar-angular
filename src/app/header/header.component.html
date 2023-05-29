@@ -1,0 +1,41 @@
+<nav class="nav">
+    <h1> <a href="/home">Shopping</a></h1>
+    <div *ngIf="menuType!=='seller'" class="nav-search">
+
+        <input type="text" 
+        #searchInput
+        (keyup)="searchProduct($event)" (blur)="hideSearch()" placeholder="Search here">   <!-- event are passing like query -->
+        <button (click)="submitSearch(searchInput.value)">Search</button>
+        <ul class="suggested-result" *ngIf="searchResult">
+            <li *ngFor="let item of searchResult">
+                <a (mousedown)="redirectToDetails(item.id)">{{item.name}} </a>
+            </li>
+        </ul>
+    </div>
+    <div [ngSwitch]="menuType">
+        <ul *ngSwitchCase="'default'">
+            <li><a routerLink="home">Home</a></li>
+            <li><a routerLink="seller-auth">Seller</a></li>
+            <li><a routerLink="/user-auth">login/Sign-Up</a></li>
+            <li><a href="">Cart({{cartItems}})</a></li>
+        </ul>
+        <ul *ngSwitchCase="'user'">
+            <li><a routerLink="seller-auth">Seller</a></li>
+            <li><a routerLink="home">Home</a></li>
+            <li><a routerLink="seller-auth">{{userName | titlecase}} </a></li>
+            <li><a routerLink="my-orders">My Orders</a></li>
+            <li><a (click)="userLogout()">Logout</a></li>
+            <li><a [routerLink]="cartItems>0?'cart-page':null">Cart({{cartItems}})</a></li>
+        </ul>
+
+        <ul *ngSwitchCase="'seller'">
+            <li><a routerLink="seller-add-product">Add product</a></li>
+            <li><a routerLink="seller-home">Product list</a></li>
+            <li><a (click)="logout()">Logout</a></li>
+            <li><a href="">{{sellerName | titlecase}}</a></li> <!--titlecase used capital the frist text -->
+
+        </ul>
+
+    </div>
+
+</nav>

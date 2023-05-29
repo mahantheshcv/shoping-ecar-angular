@@ -1,0 +1,43 @@
+.col-sm-7 {
+    box-sizing: border-box;
+    width: 58.333333%; /* Equivalent to col-sm-7 */
+    padding-right: 15px;
+    padding-left: 15px;
+    float: left;
+  }
+  
+  @media (max-width: 576px) {
+    .col-sm-7 {
+      width: 100%;
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+  .col-sm-5 {
+    box-sizing: border-box;
+    width: 41.666667%; /* Equivalent to col-sm-5 */
+    padding-right: 15px;
+    padding-left: 15px;
+    float: left;
+  }
+  
+  @media (max-width: 576px) {
+    .col-sm-5 {
+      width: 100%;
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+  
+  
+.checkout h1{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.checkout h3{
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}

@@ -1,0 +1,38 @@
+<div *ngIf="popularProduct" id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+    <div class="carousel-inner" *ngFor="let item of popularProduct">
+        <div class="carousel-item active">
+            <a routerLink="/details/{{item.id}}">
+            <img class="product-header-img" src="{{item.image}}" alt="Slide 1">
+        </a>
+            <div class="carousel-caption">
+                <h3>{{item.name}} </h3>
+                <p> {{item.discription}} </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="product-list-wrapper">
+    <h1>Trendy Products </h1>
+    <div class="custom-row">
+        <div class="col-sm-3 custom-col" *ngFor="let item of trendyProduct">
+            <div class="product-item">
+                <img src="{{item.image}}" alt=""> 
+                <div class="product-details">
+                    <h6 class="name-head">{{item.name}} </h6>
+                    <div class="product-price">
+                        <h6>{{item.price}} </h6>
+                    </div>
+                    <div class="product-color">
+                        <h6>{{item.color}} </h6>
+                    </div>
+                </div>
+                <div class="product-footer">
+                    <a  routerLink="/details/{{item.id}}">View details </a>
+                    <a href="">Add to cart </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

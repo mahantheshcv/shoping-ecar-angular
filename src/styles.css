@@ -1,1 +1,91 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.container{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.common-form{
+    
+    flex-direction: column;
+    margin: auto;
+    width: 300px;
+    text-align: center;
+    display: flex;
+}
+
+.form-input{
+    height: 35px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    border: 2px solid yellowgreen;    
+}
+.form-button{
+    height: 35px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    border: 2px solid yellowgreen;       
+}
+.p_message{
+     color: rgb(141, 231, 52);
+}
+.p_error{
+    color: red;
+}
+.invalid-input{
+    color: red;
+    font-size: 14px;
+    margin-top: -15px;
+}
+button:disabled{
+    cursor: not-allowed;
+}
+
+.col-sm-8 {
+    box-sizing: border-box;
+    width: 66.6667%; /* Equivalent to col-sm-8 */
+    padding: 0 15px;
+    float: left;
+  }
+  
+  @media (max-width: 576px) {
+    .custom-col {
+      width: 100%;
+      padding: 0;
+    }
+  }
+  
+  .row::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .row {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  
+  .row [class^="col-"] {
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+  }
+  .col-sm-2 {
+    box-sizing: border-box;
+    width: 16.666667%; /* Equivalent to col-sm-2 */
+    padding-right: 15px;
+    padding-left: 15px;
+    float: left;
+  }
+  
+  @media (max-width: 576px) {
+    .col-sm-2 {
+      width: 100%;
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+  

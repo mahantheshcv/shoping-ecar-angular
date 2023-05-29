@@ -1,0 +1,48 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  .col-sm-6 {
+    box-sizing: border-box;
+    width: 50%; /* Equivalent to col-sm-6 */
+    padding: 0 15px;
+    float: left;
+  }
+  
+  @media (max-width: 576px) {
+    .custom-col-sm-6 {
+      width: 100%;
+      padding: 0;
+    }
+  }
+  
+.product-image{
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+}
+.product-color{
+    border: 3px solid #291c1c;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.product-details{
+margin-top: 50px;
+margin-bottom: 80px;
+}
+h1,h5,h6{
+    margin-bottom: 20px;
+}
+.quantity-group{
+    margin-top: 20px;
+}
+.quantity-group button{
+    padding: 10px;
+}
+.quantity-group input{
+    width: 50px;
+    padding: 10px;
+}
